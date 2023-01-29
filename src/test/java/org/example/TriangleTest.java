@@ -1,21 +1,33 @@
+package org.example;
+
 import org.example.Triangle;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
+import org.junit.platform.commons.logging.Logger;
+import org.junit.platform.commons.logging.LoggerFactory;
+
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class TriangleTest {
+
+    static Logger logger = LoggerFactory.getLogger(TriangleTest.class);
+
+
 
     @Test
     void test() {
         Triangle exampleClass = new Triangle();
+        logger.info("info");
+        assertTrue( true );
     }
     //позитивный тест
     @ParameterizedTest
     @CsvSource({"10,20,40","100, 200,400","1,2,4"})
     void testTriangleCsvSource(int a, int b, int c) {
         Triangle triangleClass = new Triangle();
-        Assertions.assertTrue(true, "Площадь вычислена");
+        assertTrue(true, "Площадь вычислена");
     }
     // негативный тест - одна сторона отрицательная
     @ParameterizedTest

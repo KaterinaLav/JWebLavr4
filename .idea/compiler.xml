@@ -6,8 +6,11 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="JWebLavrGB4" />
+        <module name="JavaWeb4" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="JWebLavrGB4" target="1.5" />
+    </bytecodeTargetLevel>
   </component>
 </project>
